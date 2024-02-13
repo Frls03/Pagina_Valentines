@@ -96,8 +96,6 @@ body {
  .valentines-day {
    position: relative;
    cursor: pointer;
-   top: 67vw;
-   left: 52vw;
  }
  
  .envelope {
@@ -289,7 +287,12 @@ body {
       font-size: 1em; /* Ajuste del tamaño de fuente */
   }
 
-
+.valentines-day {
+  position: relative;
+  cursor: pointer;
+  top: 67vw;
+  left: 52vw;
+}
 .envelope{
   position: absolute;
   top: 66vw;
