@@ -296,17 +296,17 @@ body {
 
 .heart{
   position: absolute;
-  top: 142vw;
-  left: 23vw;
+  top: 124vw;
+  left: 24vw;
 }
 
 .text {
   position: absolute;
-  top: 128vw;
-  left: 27;
+  top: 131vw;
+  left: 32vw;
 }
 .front{
-  left: 23vw;
-  top: 114vw;
+  left: 44.7vw;
+  top: 122vw;
 }
 }
