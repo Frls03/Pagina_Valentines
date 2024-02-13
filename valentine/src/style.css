@@ -292,19 +292,19 @@ body {
 
 .envelope{
   position: absolute;
-  top: 114vw;
+  top: 66vw;
   left: 24vw;
 }
 
 .heart{
   position: absolute;
-  top: 124vw;
+  top: 64vw;
   left: 24vw;
 }
 
 .text {
   position: absolute;
-  top: 131vw;
+  top: 72vw;
   left: 32vw;
 }
 .front{
