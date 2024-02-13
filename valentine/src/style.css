@@ -34,6 +34,8 @@
 
   .valentines-day {
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -284,4 +286,27 @@ body {
   .text {
       font-size: 1em; /* Ajuste del tamaño de fuente */
   }
+
+
+.envelope{
+  position: absolute;
+  top: 114vw;
+  left: 24vw;
+}
+
+.heart{
+  position: absolute;
+  top: 142vw;
+  left: 23vw;
+}
+
+.text {
+  position: absolute;
+  top: 128vw;
+  left: 27;
+}
+.front{
+  left: 23vw;
+  top: 114vw;
+}
 }
