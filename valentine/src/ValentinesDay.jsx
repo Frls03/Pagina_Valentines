@@ -47,8 +47,8 @@ function ValentinesDay() {
         </div>
         <div className="side two">
           <p>Nena,</p>
-          <p>Nuestro primer valentines juntos de todos los que nos faltan, y solo quería recordarte lo feliz que me haces </p>
-          <p>Gracias por estar a mi lado, eres todo lo que quiero, te adoro .</p>
+          <p>Nuestro primer valentine juntos de todos los que nos faltan, y solo quería recordarte lo feliz que me haces. </p>
+          <p>Gracias por estar a mi lado, y porque este dia me emociona, porque San Valentin ya no es solo una fecha, hoy eres tu, eres todo lo que quiero, te adoro princesa.</p>
           <h2>Att: Tu novio</h2>
         </div>
       </div>
