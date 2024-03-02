@@ -39,7 +39,7 @@ function ValentinesDay() {
     <div className="valentines-day">
       <div className="envelope"></div>
       <div className="heart"></div>
-      <div className="text">Happy <br />Valentine's <br />Day!<br />Princess </div>
+      <div className="text">Feliz <br />Inicio <br />De mes <br />Amorcito </div>
       <div className="front"></div>
       <div id="card">
         <div className="side one">
