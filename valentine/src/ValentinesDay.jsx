@@ -46,9 +46,9 @@ function ValentinesDay() {
           <i className="fas fa-heart"></i>
         </div>
         <div className="side two">
-          <p>Nena,</p>
-          <p>Nuestro primer valentine juntos de todos los que nos faltan, y solo quería recordarte lo feliz que me haces. </p>
-          <p>Gracias por estar a mi lado, y porque este dia me emociona, porque San Valentin ya no es solo una fecha, hoy eres tu, eres todo lo que quiero, te adoro princesa.</p>
+        <p>Mi princesa hermosa ♥</p>
+          <p>Conocerte fue como si hubiera escuchado por primera vez una canción sabiendo que desde ese momento iba a ser mi favorita, y eso eres tu para mi, mi canción favorita, mi obra de arte favorita, mi persona favorita </p>
+          <p>Gracias porque llega otro mes y tu sigues a mi lado, no sabes lo agradecido que estoy con Dios y con la vida por la dicha que tengo de estar contigo, te adoro como no tienes idea </p>
           <h2>Att: Tu novio</h2>
         </div>
       </div>
