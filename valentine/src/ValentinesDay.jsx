@@ -20,6 +20,7 @@ import img15 from './imgs/img15.jpeg';
 import img16 from './imgs/img16.jpeg'; 
 import img17 from './imgs/img17.jpeg';
 import img18 from './imgs/img18.jpeg'; 
+import coverImage from './imgs/cover.jpg'; // Importa la imagen de portada
 
 
 
@@ -46,10 +47,13 @@ const images = [
   { src: img17, text: "Nuestra primera cena por San Valentin, solo una foto nos tomamos de lo bien que nos la pasamos y creeme que quiero que todos los 14 de febrero que nos queden sean lindos, especiales y los mejores." },
   { src: img18, text: "La primera foto que nos tomamos después de un par de años sin siquiera comunicarnos, que lindo día, que linda noche, hiciste que subiera a 2 juegos de muy dudosa seguridad y unos churros con aceite de dudosa procedencia jajaja pero dejame decirte que desde ese día empezaste a volver mis días más lindos, me hcisite la vida más linda, y hoy, 5 meses después, puedo decirte que lograste que muchas cosas malas se fueran de mi vida y le diste paso a tantas cosas lindas y tantos sentimientos sinceros que no me alcanzaría la vida para agradecerte. Te amo mi vida ♥, feliz primer mes de tantos que nos quedan." },
 ];
-function ValentinesDay() {
-
-  
+const ValentinesDay = () => {
+  const [showImages, setShowImages] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleCoverClick = () => {
+    setShowImages(true);
+  };
 
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -62,21 +66,28 @@ function ValentinesDay() {
   };
 
   return (
-    <div className="">
-    <div className="valentines-day">
-      <div className="image-container">
-        <img src={images[currentImageIndex].src} alt={`Imagen ${currentImageIndex + 1}`} />
-        <div className="text-overlay">
-          <p>{images[currentImageIndex].text}</p>
+    <div className=''> 
+    <div className="valentines-day" onClick={handleCoverClick}>
+      {!showImages && (
+        <div className="cover">
+          <img src={coverImage} alt="Portada del libro" />
         </div>
-        <div className="arrow-left" onClick={handlePrev}>
-          &#10094;
-        </div>
-        <div className="arrow-right" onClick={handleNext}>
-          &#10095;
+      )}
 
+      {showImages && (
+        <div className="image-container">
+          <img src={images[currentImageIndex].src} alt={`Imagen ${currentImageIndex + 1}`} />
+          <div className="text-overlay">
+            <p>{images[currentImageIndex].text}</p>
+          </div>
+          <div className="arrow-left" onClick={handlePrev}>
+            &#10094;
+          </div>
+          <div className="arrow-right" onClick={handleNext}>
+            &#10095;
+          </div>
         </div>
-      </div>
+      )}
     </div>
     <footer>
         <iframe 
@@ -93,6 +104,6 @@ function ValentinesDay() {
       </footer>
     </div>
   );
-}
+};
 
 export default ValentinesDay;

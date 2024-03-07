@@ -353,6 +353,7 @@ body {
 
 
 
+
 /*.envelope{
   position: absolute;
   top: 66vw;
@@ -425,7 +426,29 @@ footer {
   height: 24%;
   transform: translateX(-25%);
 }
+.cover img {
+  position: relative;
+  cursor: pointer;
+  top: 16vw;
+  left: 0vw;
+  width: 81vw;
+  height: 124vw;
+  overflow: auto;
+}
 
+.book-cover {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.book-cover img {
+  max-width: 100%;
+}
+
+.book-cover.clicked {
+  transform: translateY(-100%);
+}
 }
 
 
