@@ -337,7 +337,7 @@ body {
 .valentines-day {
   position: fixed;
   cursor: pointer;
-  top: 90vw;
+  top: 71vw;
   left: 60vw;
   overflow: overlay;
 }
@@ -419,9 +419,10 @@ body {
 }
 footer {
   position: fixed;
-  bottom: -4vw;
+  bottom: -8vw;
   left: 32vw;
   width: 84%;
+  height: 24%;
   transform: translateX(-25%);
 }
 
