@@ -83,7 +83,7 @@ function ValentinesDay() {
           title="spotify"
           src="https://open.spotify.com/embed/playlist/0aqMlz9eLYgXzeZ0wZNlOY?utm_source=generator" 
           width="95%" 
-          height="152" 
+          height="100" 
           frameborder ="0" 
           allowFullScreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
