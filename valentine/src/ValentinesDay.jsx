@@ -74,6 +74,7 @@ function ValentinesDay() {
         </div>
         <div className="arrow-right" onClick={handleNext}>
           &#10095;
+
         </div>
       </div>
     </div>
