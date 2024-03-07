@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 #card {
   height: 500px;
@@ -11,41 +11,9 @@
   visibility: hidden;
 }
 
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-  #card {
-    width: 90%; /* Reducir el ancho para dispositivos móviles */
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
-    margin: 2em auto; /* Ajustar el margen */
-    position: static; /* Cambiar la posición a estática para que no sea fija */
-    visibility: hidden; 
-    display: flex;
-    top: 50px;
- 
-  }
-  .side.side.one {
-    display: none; 
-  }
-  #card p {
-    padding-left: 0 !important; /* Eliminar el relleno a la izquierda en dispositivos móviles */
-    padding-right: 0 !important; /* Eliminar el relleno a la derecha en dispositivos móviles */
-    font-size: 1.7em !important;
-  }
-
-  .valentines-day {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-}
-
 
 #card h2 {
-   font-size:1.5em;
+   font-size:1.2em;
    margin:0;
    color:pink;
    text-align: center;
@@ -61,7 +29,7 @@
 
 
 .side {
-   background:#eee;
+   background:#b13350;
    height:550px;
    width:400px;
 
@@ -79,7 +47,7 @@
    overflow: hidden;
 }
 .side.two {
-   transform:skew(10deg,-15deg);
+   transform:skew(0deg,0deg);
    background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
 }
 
@@ -88,8 +56,8 @@ body {
    align-items: center;
    justify-content: center;
    height: 100vh;
-   font-family: 'Sacramento', cursive;
-   background-color: #f1e3d3;
+   font-family: 'Lobster', cursive;
+   background-color: #c86763;
    overflow: hidden;
  }
  
@@ -98,7 +66,7 @@ body {
    cursor: pointer;
  }
  
- .envelope {
+ /*.envelope {
    position: relative;
    filter: drop-shadow(0 0 25px rgba(0,0,0,.3));
  }
@@ -123,7 +91,7 @@ body {
    height:225px;
    left:-90px;
    top:45px;
- }
+ } actualizacion futura*/
  
  .heart {
    position: relative;
@@ -155,7 +123,7 @@ body {
    left:100px;
    top:0;}
  
- .front {
+ /*.front {
    position: absolute;
    width:0;
    height:0;
@@ -190,7 +158,7 @@ body {
    top:-36px;
    left:-170px;
  }
- 
+ futura actualizacion*/
  .text {
    position: absolute;
    font-family: arial;
@@ -268,11 +236,44 @@ body {
 .made-with-love a {
   font-weight: bold; /* Añadiendo negrita solo a los enlaces */
 }
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  #card {
+    width: 90%; /* Reducir el ancho para dispositivos móviles */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    margin: 2em auto; /* Ajustar el margen */
+    position: static; /* Cambiar la posición a estática para que no sea fija */
+    visibility: hidden; 
+    display: flex;
+    top: 50px;
+ 
+  }
+  .side.side.one {
+    display: none; 
+  }
+  #card p {
+    padding-left: 0 !important; /* Eliminar el relleno a la izquierda en dispositivos móviles */
+    padding-right: 0 !important; /* Eliminar el relleno a la derecha en dispositivos móviles */
+    font-size: 1.25em !important;
+  }
+
+  .valentines-day {
+    position: center;
+    width: 95%;
+    height: 77%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+}
+
+
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 600px) {
-  #card {
-      width: 90%;
+ /* #card {
+      width: 77%;
       max-width: 90%;
       margin: 2em auto;
   }
@@ -282,36 +283,181 @@ body {
       max-width: 90%;
       margin: 0 auto;
   }
-
+*/
   .text {
       font-size: 1em; /* Ajuste del tamaño de fuente */
   }
 
 .valentines-day {
-  position: relative;
+  position: fixed;
   cursor: pointer;
-  top: 67vw;
-  left: 52vw;
+  top: 90vw;
+  left: 60vw;
+  overflow: overlay;
 }
-.envelope{
+.valentines-day img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  max-width: 200%;
+  height: 118vw
+
+}
+
+
+/*.envelope{
   position: absolute;
   top: 66vw;
   left: 24vw;
-}
+}Solo para actualizaciones futuras*/
 
 .heart{
   position: absolute;
-  top: 78vw;
+  top: 59vw;
   left: 24vw;
 }
 
 .text {
   position: absolute;
-  top: 85vw;
-  left: 32vw;
+  top: 66vw;
+  left: 34vw;
 }
 .front{
   left: 43.6vw;
   top: 77vw;
 }
+
+/* Estilos específicos para la imagen */
+
+.image-container {
+  object-fit: cover;
+  position: relative;
+  width: 82%;
+  height: 110%;
+  overflow: overlay;
 }
+
+.text-overlay {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 94%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2vw;
+  text-align: center;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+footer {
+  position: fixed;
+  bottom: -4vw;
+  left: 32vw;
+  width: 84%;
+  transform: translateX(-25%);
+}
+
+}
+
+
+/* Estilos para dispositivos de escritorio */
+@media only screen and (min-width: 601px) {
+  /* Ajustes para la tarjeta */
+  #card {
+    height: auto; /* Cambiar la altura a automático */
+    width: 50%; /* Ajustar el ancho al 50% */
+    margin: 5em auto; /* Alinear al centro */
+    position: static; /* Cambiar la posición a estática */
+    display: flex; /* Utilizar flexbox */
+    visibility: hidden; /* Ocultar la tarjeta por defecto */
+  }
+
+  /* Ajustes para la imagen */
+  .valentines-day {
+    position: relative; /* Cambiar la posición a relativa */
+    cursor: pointer; /* Cambiar el cursor a puntero */
+    width: 80%; /* Ajustar el ancho al 80% */
+    height: auto; /* Cambiar la altura a automático */
+    margin: 5em auto; /* Alinear al centro */
+    overflow: hidden; /* Ocultar el desbordamiento */
+  }
+
+  /* Ajustes para la imagen en el contenedor */
+  .image-container {
+    width: 100%; /* Ancho completo */
+    height: 80%; /* Altura al 80% */
+    position: relative; /* Cambiar la posición a relativa */
+    overflow: hidden; /* Ocultar el desbordamiento */
+  }
+
+  .valentines-day img {
+    object-fit: cover; /* Ajustar la imagen para que cubra el contenedor */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    display: block; /* Mostrar como bloque */
+  }
+
+  /* Ajustes para el texto */
+  .text-overlay {
+    position: absolute; /* Cambiar la posición a absoluta */
+    bottom: 0; /* Alinear al fondo */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con transparencia */
+    padding: 20px; /* Añadir relleno */
+    text-align: center; /* Centrar el texto */
+    box-sizing: border-box; /* Incluir el relleno en el ancho */
+  }
+
+  /* Ajustes para las flechas */
+  .arrow-left,
+  .arrow-right {
+    position: absolute; /* Cambiar la posición a absoluta */
+    top: 50%; /* Alinear verticalmente al centro */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    cursor: pointer; /* Cambiar el cursor a puntero */
+    font-size: 24px; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+    padding: 10px; /* Añadir relleno */
+    z-index: 1; /* Asegurar que esté encima del texto */
+  }
+
+  .arrow-left {
+    left: 10px; /* Alinear a la izquierda */
+  }
+
+  .arrow-right {
+    right: 10px; /* Alinear a la derecha */
+  }
+
+  /* Ajustes para el pie de página */
+  footer {
+    position: fixed; /* Cambiar la posición a fija */
+    bottom: 0; /* Alinear al fondo */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    background-color: #fff; /* Color de fondo */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Añadir relleno vertical */
+    z-index: 999; /* Asegurar que esté encima de otros elementos */
+  }
+}
+
