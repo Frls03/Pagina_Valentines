@@ -434,6 +434,11 @@ footer {
   width: 81vw;
   height: 124vw;
   overflow: auto;
+  z-index: 1; /* Asegura que la portada esté sobre las imágenes */
+  transition: transform 2s ease-in-out; /* Añade una transición suave al transform */
+}
+.cover.clicked {
+  transform: translateY(-100%); /* Mueve la portada hacia arriba */
 }
 
 .book-cover {
