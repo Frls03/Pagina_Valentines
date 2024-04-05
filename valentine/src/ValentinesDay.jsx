@@ -2,6 +2,8 @@
 import React, { useState} from 'react';
 import './style.css'; 
 /*import $ from 'jquery'; // Importar jQuery*/
+import img1mes from './imgs/img1mes.jpg';
+import img2mes from './imgs/img2mes.jpg';
 import img1 from './imgs/img1.jpeg'; 
 import img2 from './imgs/img2.jpeg'; 
 import img3 from './imgs/img3.jpeg'; 
@@ -20,6 +22,15 @@ import img15 from './imgs/img15.jpeg';
 import img16 from './imgs/img16.jpeg'; 
 import img17 from './imgs/img17.jpeg';
 import img18 from './imgs/img18.jpeg'; 
+import img19 from './imgs/img19.jpeg';
+import img20 from './imgs/img20.jpeg';
+import img21 from './imgs/img21.jpeg';
+import img22 from './imgs/img22.jpeg';
+import img23 from './imgs/img23.jpeg';
+import img24 from './imgs/img24.jpeg';
+import img25 from './imgs/img25.jpeg';
+import img26 from './imgs/img26.jpeg';
+
 import coverImage from './imgs/cover.jpg'; // Importa la imagen de portada
 
 
@@ -27,7 +38,9 @@ import coverImage from './imgs/cover.jpg'; // Importa la imagen de portada
 
 
 
+
 const images = [
+  {src: img1mes, text: "Nuestro primer mes"},
   { src: img1, text: "Si alguna vez me preguntan si la suerte está de mi lado solo bastará con decir que encontré a mi mejor amiga y al amor de mi vida en una sola persona. Creeme cuando te digo que no puedo describirte lo emocionado que estoy por experimentar esta vida junto a ti, y esto es solo el inicio. " },
   { src: img2, text: "Hay veces que simplemente no me salen las palabras, en donde quisiera que estuvieras a mi lado para que con una mirada supieras cuanto te amo, porque eso he hecho siempre Beita, es un sentimiento que nunca desapareció y sin importar cuanto llevemos, creo que mis sentimientos hacia ti, nunca pudieron estar más claros" },
   { src: img3, text: "Desde que estás en mi vida, los días son un poco más brillantes, son menos estresantes, menos agobiantes, más lindos y más esperanzadores, tu haces que mis días sean más lindos, y por eso siempre estaré agradecido." },
@@ -46,7 +59,19 @@ const images = [
   { src: img16, text: "El pequeño Luis siempre soñó con alguien como tu, alguien amorosa, atenta, detallista y hermosa, simplemente eres lo que siempre soñé y lo que siempre pedí" },
   { src: img17, text: "Nuestra primera cena por San Valentin, solo una foto nos tomamos de lo bien que nos la pasamos y creeme que quiero que todos los 14 de febrero que nos queden sean lindos, especiales y los mejores." },
   { src: img18, text: "La primera foto que nos tomamos después de un par de años sin siquiera comunicarnos, que lindo día, que linda noche, hiciste que subiera a 2 juegos de muy dudosa seguridad y comer unos churros con aceite de dudosa procedencia jajaja pero dejame decirte que desde ese día empezaste a volver mis días más lindos, me hcisite la vida más linda, y hoy, 5 meses después, puedo decirte que lograste que muchas cosas malas se fueran de mi vida y le diste paso a tantas cosas lindas y tantos sentimientos sinceros que no me alcanzaría la vida para agradecerte. Te amo mi vida ♥ feliz primer mes de tantos que nos quedan." },
+  { src: img2mes, text: "Nuestro segundo mes" },
+  { src: img19, text: "Tu amor es como una melodía que siempre quiero escuchar, llena de armonía y belleza." },
+  { src: img20, text: "No hay nada que me haga más feliz que verte feliz, y si hay algo que me hace más feliz que eso, es saber que soy yo la razón de tu felicidad, porque no hay nada que me haga más feliz que verte sonreír, porque tu sonrisa es mi felicidad." },
+  { src: img21, text: "Tú eres mi lugar favorito, donde quiero estar para toda la vida, porque no importa la hora, ni el día, ni la ubicación, porque cuando estás tu, todo es más bonito." },
+  { src: img22, text: "En el vasto universo de la programación, eres mi función favorita, siempre devolviendo amor y felicidad." },
+  { src: img23, text: "Es de mis fotos favoritas, no sabes lo bien que se siente verte, es como si todo alrededor se hiciera borroso y mi único enfoque eres tu, es la sensación más bonita de todas, junto con abrazarte, besarte y pasar mis días contigo. Amo pasar tiempo contigo, tomarme fotos, jugar, escuchar musica, molestar, caminar, ir a ''cayala'' juntos jajaja, amo hacer todo contigo, porque contigo todo es mejor." },
+  { src: img24, text: "Eres mi faro en la tormenta, la luz que me guía a través de los mares turbulentos de la vida. Tu amor es como un puerto seguro, un lugar donde puedo descansar y recargar, sabiendo que siempre estaré seguro en tus brazos. Eres mi ancla, manteniéndome firme cuando las olas de la vida amenazan con arrastrarme." },
+  { src: img25, text: "Con cada día que pasa, mi amor por ti solo se hace más fuerte.Eres como un libro que nunca quiero dejar de leer, lleno de misterio, aventura y amor. Cada página que paso contigo revela una nueva faceta de tu belleza y bondad, y no puedo esperar a ver lo que los próximos capítulos de nuestra vida juntos nos deparan." },
+  { src: img26, text: "Eres mi razón de ser, mi inspiración y mi felicidad. Cada día a tu lado es un regalo que valoro y atesoro. Te amo más de lo que las palabras pueden expresar. Cuidaré de la niña tan linda que vive en ti, haré que te sientas amada toda la vida, porque créeme cuando te digo que el hacerte feliz a ti, es hacerme feliz a mi. Te amo mi reina, te amo con toda mi vida ♥ ♥ ♥ " },
+
 ];
+
+
 const ValentinesDay = () => {
   const [showImages, setShowImages] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

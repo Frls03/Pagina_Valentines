@@ -437,22 +437,18 @@ footer {
   z-index: 1; /* Asegura que la portada esté sobre las imágenes */
   transition: transform 2s ease-in-out; /* Añade una transición suave al transform */
 }
+
 .cover.clicked {
-  transform: translateY(-100%); /* Mueve la portada hacia arriba */
+  animation: slideUp 1s ease-in-out forwards; /* Aplica la animación al hacer clic */
 }
 
-.book-cover {
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.5s ease;
-}
-
-.book-cover img {
-  max-width: 100%;
-}
-
-.book-cover.clicked {
-  transform: translateY(-100%);
+@keyframes slideUp {
+  0% {
+    transform: translateY(0); /* Estado inicial */
+  }
+  100% {
+    transform: translateY(-100%); /* Estado final */
+  }
 }
 }
 
