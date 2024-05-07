@@ -1,542 +1,150 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kalam:wght@300;400;700&display=swap');
 
-
-
-#card {
-  height: 500px;
-  width: 800px;
-  margin: 5em auto;
-  position: fixed;
-  top: -15px;
-  left: 25%;
-  display: flex;
-  visibility: hidden;
-}
-
-
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-  #card {
-    width: 90%; /* Reducir el ancho para dispositivos móviles */
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
-    margin: 2em auto; /* Ajustar el margen */
-    position: static; /* Cambiar la posición a estática para que no sea fija */
-    visibility: hidden; 
-    display: flex;
-    top: 50px;
- 
-  }
-  .side.side.one {
-    display: none; 
-  }
-  #card p {
-    padding-left: 0 !important; /* Eliminar el relleno a la izquierda en dispositivos móviles */
-    padding-right: 0 !important; /* Eliminar el relleno a la derecha en dispositivos móviles */
-    font-size: 1.25em !important;
-  }
-
-  .valentines-day {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-}
-
-
-
-#card h2 {
-   font-size:1.2em;
-   margin:0;
-   color:pink;
-   text-align: center;
-}
-
-
-#card p {
-   font-size: 0.7em;
-   text-align: justify;
-   padding-left: 30px; /* Espacio en blanco a la izquierda */
-   padding-right: 30px; /* Espacio en blanco a la derecha */
-}
-
-
-.side {
-
-   background:#b13350;
-
-
-
-   height:550px;
-   width:400px;
-
-   padding:10px;
-}
-.side.one {
-   width:320px;
-   transform:skew(10deg,20deg);
-   background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
-   display: flex; /* Utiliza flexbox para centrar el corazón verticalmente */
-   justify-content: center; /* Centra horizontalmente el contenido */
-   align-items: center; /* Centra verticalmente el contenido */
-   transform: skew(10deg, 20deg);
-   position: relative;
-   overflow: hidden;
-}
-.side.two {
-   transform:skew(0deg,0deg);
-   background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
-}
-
-body {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100vh;
-
-   font-family: 'Lobster', cursive;
-   background-color: #c86763;
-
-   overflow: hidden;
- }
- 
- .valentines-day {
-   position: relative;
-   cursor: pointer;
- }
- 
- /*.envelope {
-   position: relative;
-   filter: drop-shadow(0 0 25px rgba(0,0,0,.3));
- }
- 
- .envelope:before {
-   content:"";
-   position: absolute;
-   width:254px;
-   height:254px;
-   background-color: #ff9494;
-   transform: rotate(-45deg);
-   border-radius: 0 15px 0 0;
-   left:-37px;
-   top:-82px;
- }
- 
- .envelope:after {
-   content:"";
-   position: absolute;
-   background-color: #ff9494;
-   width:360px;
-   height:225px;
-   left:-90px;
-   top:45px;
- } actualizacion futura*/
- 
- .heart {
-   position: relative;
-   background-color: #e01911;
-   display: inline-block;
-   height: 180px;
-   top:50px;
-   left:0;
-   transform: rotate(-45deg);
-   width:180px;
-   filter: drop-shadow(0 -10px 25px rgba(0,0,0,.3));
-   transition: .5s;
- }
-   
- .heart:before, .heart:after {
-   content:"";
-   background-color: #e01911;
-   border-radius:50%;
-   height: 180px;
-   width: 180px;
-   position: absolute;
-   }
-   
- .heart:before {
-   top:-100px;
-   left:0;}
-   
- .heart:after {
-   left:100px;
-   top:0;}
- 
- /*.front {
-   position: absolute;
-   width:0;
-   height:0;
-   border-right: 190px solid #fbd2d2;
-   border-top: 113px solid transparent;
-   border-bottom: 113px solid transparent;
-   top:44px;
-   left:80px;
-   z-index:4;
- }
- 
- .front:before {
-   content:"";
-   position: absolute;
-   width:0;
-   height:0;
-   border-left: 190px solid #fbd2d2;
-   border-top: 113px solid transparent;
-   border-bottom: 113px solid transparent;
-   top:-113px;
-   left:-170px;
- }
- 
- .front:after {
-   width:0;
-   height:0;
-   position: absolute;
-   content:"";
-   border-bottom: 150px solid #fce7e9;
-   border-right:180px solid transparent;
-   border-left: 180px solid transparent;
-   top:-36px;
-   left:-170px;
- }
- futura actualizacion*/
- .text {
-   position: absolute;
-   font-family: arial;
-   letter-spacing:5px;
-   text-align: center;
-   color: white;
-   z-index:2;
-   top:80px;
-   left:15px;
-   transition: .5s;
- }
- 
- .valentines-day:hover .heart {
-   transform: translateY(-50px) rotate(-45deg);
- }
- 
- .valentines-day:hover .text {
-   transform: translateY(-50px);
- }
- 
- 
-
-.side.one .fa-heart {
-  font-size: 8em;
-  color: red;
-  animation: pulseHeart 1s ease-in-out infinite alternate;
-  cursor: default;
-}
-
-@keyframes pulseHeart {
-  0% {
-     transform: scale(1);
-  }
-  100% {
-     transform: scale(1.2);
-  }
-}
-
-
-.made-with-love {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  top: 15PX; /* Cambiado de "bottom: 10px;" a "top: 0;" */
-  text-align: center;
-  font-size: 10px;
-  z-index: 9999;
-  font-family: arial;
-  color: #e06ae0;
-  font-weight: 600;
-}
-.made-with-love i {
+.kalam-light {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
   font-style: normal;
-  font-size: 14px;
-  position: relative;
-  top: 2px;
-}
-.made-with-love a {
-  color: #c74f2b;
-  text-decoration: none;
-
-  
-}
-.made-with-love a:hover {
-  text-decoration: underline;
-}
-.made-with-love .dribble img {
-  max-width: 100%;
-  width: 26px;
-  position: relative;
-  top: -2px;
-  vertical-align: middle;
 }
 
-.made-with-love a {
-  font-weight: bold; /* Añadiendo negrita solo a los enlaces */
-}
-/* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-  #card {
-    width: 90%; /* Reducir el ancho para dispositivos móviles */
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
-    margin: 2em auto; /* Ajustar el margen */
-    position: static; /* Cambiar la posición a estática para que no sea fija */
-    visibility: hidden; 
-    display: flex;
-    top: 50px;
- 
-  }
-  .side.side.one {
-    display: none; 
-  }
-  #card p {
-    padding-left: 0 !important; /* Eliminar el relleno a la izquierda en dispositivos móviles */
-    padding-right: 0 !important; /* Eliminar el relleno a la derecha en dispositivos móviles */
-    font-size: 1.25em !important;
-  }
+body{
+  width: 97vw;
+  height: 87vh;
+  background-color: #460277;
+  font-family: "Kalam", cursive;
+  margin: 5px;
+  padding: 0;
 
-  .valentines-day {
-    position: center;
-    width: 95%;
-    height: 85%;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
+  /* Contenedor */
+  padding-top: 0px;
+  overflow: scroll;
+}
+.texto.expandido {
+  height: auto !important;
+  background-color: rgba(87, 48, 172, 0.71) !important;
+  transform: translateY(-150px) !important;
 }
 
-
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 600px) {
-
- /* #card {
-
-
-      width: 77%;
-      max-width: 90%;
-      margin: 2em auto;
-  }
-  
-  .side {
-      width: 90%;
-      max-width: 90%;
-      margin: 0 auto;
-  }
-*/
-  .text {
-      font-size: 1em; /* Ajuste del tamaño de fuente */
-  }
-
-.valentines-day {
+.texto.expandido p {
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  overflow: scroll !important;
+  text-shadow: 0px 0px 10px #000000 !important;
+}
+.atras{
   position: fixed;
-  cursor: pointer;
-  top: 77vw;
-  left: 60vw;
-  overflow: overlay;
+  width: 11vw;
+  display: flex;
+  top: 65vw;
+  left: -4vw;
+  height: 10vw;
+  margin: 22px;
 }
 
-.valentines-day img {
-  object-fit: cover;
-  display: block;
+.adelante{
+  position: fixed;
+  width: 11vw;
+  display: flex;
+  top: 65vw;
+  left: 82vw;
+  height: 10vw;
+  margin: 22px;
+}
+.carrusel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   width: 100%;
-  max-width: 200%;
-  height: 118vw
-
+  height: 100vh;
 }
 
-
-
-
-/*.envelope{
-  position: absolute;
-  top: 66vw;
-  left: 24vw;
-}Solo para actualizaciones futuras*/
-
-.heart{
-  position: absolute;
-  top: 59vw;
-  left: 24vw;
-}
-
-.text {
-  position: absolute;
-  top: 66vw;
-
-  left: 34vw;
-
-}
-.front{
-  left: 43.6vw;
-  top: 77vw;
-}
-
-
-/* Estilos específicos para la imagen */
-
-.image-container {
-  object-fit: cover;
-  position: relative;
-  width: 82%;
-  height: 110%;
-  overflow: overlay;
-}
-
-.text-overlay {
-  position: static;
-  bottom: 0;
-  left: 0;
-  width: 94%;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2vw;
-  text-align: center;
-}
-
-.arrow-left,
-.arrow-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 24px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-}
-
-.arrow-left {
-  left: 10px;
-}
-
-.arrow-right {
-  right: 10px;
-}
-footer {
+.imagenes{
   position: fixed;
-  bottom: -22vw;
-  left: 32vw;
-  width: 84%;
-  height: 24%;
-  transform: translateX(-25%);
+  top: 5vw;
 }
-.cover img {
+
+.img{
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+  height: 135vw;
+  width: 75vw;
+  border-radius: 6vw;
+  margin: 5px;
+  object-fit: scale-down;
+  filter: saturate(175%);
+}
+
+.texto{
+  overflow: hidden;
+  position: fixed;
+  flex-direction: unset;
+  transform: translateY(0px);
+  margin-bottom: -106vw;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(63, 106, 138, 0.21);
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+
+.texto p{
+  align-items: center;
+  padding: 10px;
+  color:white;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.imagenes .texto{
+  width: 77vw;
+  height: 100px;
+  transition: 1s;
+  top: 132vw;
+}
+
+.spotify-icon {
   position: relative;
-  cursor: pointer;
-  top: 16vw;
-  left: 0vw;
-  width: 81vw;
-  height: 124vw;
-  overflow: auto;
-  z-index: 1; /* Asegura que la portada esté sobre las imágenes */
-  transition: transform 2s ease-in-out; /* Añade una transición suave al transform */
+  width: 35px;
+  height: 35px;
+  top: 15vw;
+  left: 5vw;
 }
 
-.cover.clicked {
-  animation: slideUp 1s ease-in-out forwards; /* Aplica la animación al hacer clic */
+.imagenes:hover .texto{
+  transition: height 1s, transform 1s, background-color 1s;
+  transform: translateY(-150px);
+  height: 50vw;
+  background-color: rgba(87, 48, 172, 0.71);
+ }
+.imagenes:hover .texto p{
+  transition: font-size 0s .2s linear;
+  font-size: 13px;
+  font-weight: 300;
+  overflow: scroll;
+  text-shadow: 0px 0px 10px #000000;
 }
 
-@keyframes slideUp {
-  0% {
-    transform: translateY(0); /* Estado inicial */
-  }
-  100% {
-    transform: translateY(-100%); /* Estado final */
-  }
-}
+.puntos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/* Estilos para dispositivos de escritorio */
-@media only screen and (min-width: 601px) {
-  /* Ajustes para la tarjeta */
-  #card {
-    height: auto; /* Cambiar la altura a automático */
-    width: 50%; /* Ajustar el ancho al 50% */
-    margin: 5em auto; /* Alinear al centro */
-    position: static; /* Cambiar la posición a estática */
-    display: flex; /* Utilizar flexbox */
-    visibility: hidden; /* Ocultar la tarjeta por defecto */
-  }
-
-  /* Ajustes para la imagen */
-  .valentines-day {
-    position: relative; /* Cambiar la posición a relativa */
-    cursor: pointer; /* Cambiar el cursor a puntero */
-    width: 80%; /* Ajustar el ancho al 80% */
-    height: auto; /* Cambiar la altura a automático */
-    margin: 5em auto; /* Alinear al centro */
-    overflow: hidden; /* Ocultar el desbordamiento */
-  }
-
-  /* Ajustes para la imagen en el contenedor */
-  .image-container {
-    width: 100%; /* Ancho completo */
-    height: 80%; /* Altura al 80% */
-    position: relative; /* Cambiar la posición a relativa */
-    overflow: hidden; /* Ocultar el desbordamiento */
-  }
-
-  .valentines-day img {
-    object-fit: cover; /* Ajustar la imagen para que cubra el contenedor */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    display: block; /* Mostrar como bloque */
-  }
-
-  /* Ajustes para el texto */
-  .text-overlay {
-    position: absolute; /* Cambiar la posición a absoluta */
-    bottom: 0; /* Alinear al fondo */
-    left: 0; /* Alinear a la izquierda */
-    width: 100%; /* Ancho completo */
-    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con transparencia */
-    padding: 20px; /* Añadir relleno */
-    text-align: center; /* Centrar el texto */
-    box-sizing: border-box; /* Incluir el relleno en el ancho */
-  }
-
-  /* Ajustes para las flechas */
-  .arrow-left,
-  .arrow-right {
-    position: absolute; /* Cambiar la posición a absoluta */
-    top: 50%; /* Alinear verticalmente al centro */
-    transform: translateY(-50%); /* Centrar verticalmente */
-    cursor: pointer; /* Cambiar el cursor a puntero */
-    font-size: 24px; /* Tamaño de fuente */
-    color: #fff; /* Color del texto */
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
-    padding: 10px; /* Añadir relleno */
-    z-index: 1; /* Asegurar que esté encima del texto */
-  }
-
-  .arrow-left {
-    left: 10px; /* Alinear a la izquierda */
-  }
-
-  .arrow-right {
-    right: 10px; /* Alinear a la derecha */
-  }
-
-  /* Ajustes para el pie de página */
-  footer {
-    position: fixed; /* Cambiar la posición a fija */
-    bottom: 0; /* Alinear al fondo */
-    left: 0; /* Alinear a la izquierda */
-    width: 100%; /* Ancho completo */
-    background-color: #fff; /* Color de fondo */
-    text-align: center; /* Centrar el texto */
-    padding: 10px 0; /* Añadir relleno vertical */
-    z-index: 999; /* Asegurar que esté encima de otros elementos */
-  }
+.puntos p{
+  font-size: 100px;
+  font-weight: 500;
+  margin-top: -50px;
+  color: black;
 }
 
-
+.puntos .bold{
+  font-weight: 700;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #5E17EB ;
+}
 
 
